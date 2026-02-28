@@ -1,0 +1,37 @@
+# --- OS & IDE ---
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.DS_Store
+Thumbs.db
+
+# --- Root (Current Structure) ---
+# 親フォルダ直下にある target も一応無視
+target/
+HELP.md
+
+# --- Backend (Spring Boot / Maven) ---
+# backend フォルダの中にあるビルド成果物をしっかり指定します
+backend/target/
+backend/.mvn/
+backend/*.jar
+backend/.apt_generated
+backend/.classpath
+backend/.factorypath
+backend/.project
+backend/.settings
+
+# --- Frontend (React / Vite) ---
+# これから作る frontend フォルダ用の設定を先に仕込んでおきます
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.eslintcache
+
+# --- Secrets (Critical!) ---
+# 秘密のファイルはここでガッチリガード
+backend/src/main/resources/application.properties
+.env
